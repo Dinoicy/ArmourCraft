@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "armourcraft:models.armor/red_diamond_layer_2"
+  }
+}

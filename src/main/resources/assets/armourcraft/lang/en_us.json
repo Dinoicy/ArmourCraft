@@ -1,0 +1,19 @@
+{
+  "itemGroup.armourCraftTab": "Armour Craft",
+
+  "item.armourcraft.red_diamond": "Red Diamond",
+
+  "item.armourcraft.red_diamond_sword": "Red Diamond Sword",
+  "item.armourcraft.red_diamond_pickaxe": "Red Diamond Pickaxe",
+  "item.armourcraft.red_diamond_shovel": "Red Diamond Shovel",
+  "item.armourcraft.red_diamond_axe": "Red Diamond Axe",
+  "item.armourcraft.red_diamond_hoe": "Red Diamond Hoe",
+
+  "item.armourcraft.red_diamond_helmet": "Red Diamond Helmet",
+  "item.armourcraft.red_diamond_chestplate": "Red Diamond Chestplate",
+  "item.armourcraft.red_diamond_leggings": "Red Diamond Leggings",
+  "item.armourcraft.red_diamond_boots": "Red Diamond Boots",
+
+  "block.armourcraft.red_diamond_block": "Block of Red Diamond",
+  "block.armourcraft.red_diamond_ore": "Red Diamond Ore"
+}
