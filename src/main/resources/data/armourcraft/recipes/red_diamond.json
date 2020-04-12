@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "armourcraft:red_diamond_block"
+    }
+  ],
+  "result": {
+    "item": "armourcraft:red_diamond"
+  }
+}

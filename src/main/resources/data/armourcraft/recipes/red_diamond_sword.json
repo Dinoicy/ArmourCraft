@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "armourcraft:red_diamond"
+    }
+  },
+  "result": {
+    "item": "armourcraft:red_diamond_sword"
+  }
+}
