@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "armourcraft:red_diamond"
+    }
+  },
+  "result": {
+    "item": "armourcraft:red_diamond_chestplate"
+  }
+}
