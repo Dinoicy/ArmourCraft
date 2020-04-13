@@ -1,6 +1,7 @@
 package com.dinoicy.armourcraft;
 
 import com.dinoicy.armourcraft.init.ItemInit;
+import com.dinoicy.armourcraft.init.RedCTileEntityTypes;
 import com.dinoicy.armourcraft.world.gen.ArmourOreGen;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -28,6 +29,8 @@ public class ArmourCraft
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::doClientStuff);
+
+        RedCTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);

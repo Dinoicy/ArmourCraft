@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XxX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "armourcraft:red_diamond"
+    },
+    "x": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "result": {
+    "item": "armourcraft:red_miner"
+  }
+}

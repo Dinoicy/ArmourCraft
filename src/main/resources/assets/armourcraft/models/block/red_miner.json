@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "armourcraft:blocks/red_miner_front",
+    "down": "armourcraft:blocks/red_diamond_block",
+    "up": "armourcraft:blocks/red_miner_top",
+    "north": "armourcraft:blocks/red_miner_front",
+    "east": "armourcraft:blocks/red_miner_side",
+    "south": "armourcraft:blocks/red_miner_side",
+    "west": "armourcraft:blocks/red_miner_front"
+  }
+}
