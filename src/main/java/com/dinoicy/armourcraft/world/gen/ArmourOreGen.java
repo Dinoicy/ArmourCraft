@@ -14,13 +14,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class ArmourOreGen {
     public static void generateOre() {
         for(Biome biome : ForgeRegistries.BIOMES) {
-            if (biome == Biomes.FOREST) {
                 ConfiguredPlacement customConfig = Placement.COUNT_RANGE
-                        .configure(new CountRangeConfig(20, 5, 5, 25));
+                        .configure(new CountRangeConfig(10, 5, 5, 17));
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.red_diamond_ore.getDefaultState(), 10))
+                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.red_diamond_ore.getDefaultState(), 7))
                         .withPlacement(customConfig));
-            }
         }
     }
 }
