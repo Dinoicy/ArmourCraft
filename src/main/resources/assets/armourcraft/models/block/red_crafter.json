@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "armourcraft:blocks/red_crafter_front",
+    "down": "armourcraft:blocks/red_diamond_block",
+    "up": "armourcraft:blocks/red_crafter_top",
+    "north": "armourcraft:blocks/red_crafter_front",
+    "east": "armourcraft:blocks/red_crafter_side",
+    "south": "armourcraft:blocks/red_crafter_side",
+    "west": "armourcraft:blocks/red_crafter_front"
+  }
+}
