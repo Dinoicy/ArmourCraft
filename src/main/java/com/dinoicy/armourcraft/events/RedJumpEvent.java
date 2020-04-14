@@ -1,15 +1,5 @@
 package com.dinoicy.armourcraft.events;
 
-import com.dinoicy.armourcraft.ArmourCraft;
-import com.dinoicy.armourcraft.init.BlockInitNew;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
-import net.minecraft.world.World;
-import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-
 //@Mod.EventBusSubscriber(modid = ArmourCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 //public class RedJumpEvent {
     //@SubscribeEvent

@@ -9,70 +9,64 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-@Mod.EventBusSubscriber(modid = ArmourCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(ArmourCraft.MOD_ID)
 public class ItemInit {
 
+    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, ArmourCraft.MOD_ID);
+
+    public static void init() {
+        ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+    }
+    //Blocks
+    public static final RegistryObject<Item> red_diamond_block = ITEMS.register("red_diamond_block", () -> new Item(new Item.Properties().group(ArmourCraft.TAB)));
+    public static final RegistryObject<Item> red_diamond_ore = ITEMS.register("red_diamond_ore", () -> new Item(new Item.Properties().group(ArmourCraft.TAB)));
+    public static final RegistryObject<Item> red_crafter = ITEMS.register("red_crafter", () -> new Item(new Item.Properties().group(ArmourCraft.TAB)));
+    public static final RegistryObject<Item> red_miner = ITEMS.register("red_diamond", () -> new Item(new Item.Properties().group(ArmourCraft.TAB)));
+
     //Items
-    public static final Item red_diamond = null;
+    public static final RegistryObject<Item> red_item = ITEMS.register("red_item", () -> new Item(new Item.Properties().group(ArmourCraft.TAB)));
+
+    public static final RegistryObject<Item> red_diamond = ITEMS.register("red_diamond", () -> new Item(new Item.Properties().group(ArmourCraft.TAB)));
 
     //Tools
-    public static final Item red_diamond_sword = null;
-    public static final Item red_diamond_pickaxe = null;
-    public static final Item red_diamond_shovel = null;
-    public static final Item red_diamond_axe = null;
-    public static final Item red_diamond_hoe = null;
+    public static final RegistryObject<Item> red_diamond_sword = ITEMS.register("red_diamond_sword", () ->
+            new SwordItem(RedDiamondTier.RED_DIAMOND_TIER, 4, -2.3f, new Item.Properties().group(ArmourCraft.TAB)));
+
+    public static final RegistryObject<Item> red_diamond_pickaxe = ITEMS.register("red_diamond_pickaxe", () ->
+            new PickaxeItem(RedDiamondTier.RED_DIAMOND_TIER, 1, -2.7f, new Item.Properties().group(ArmourCraft.TAB)));
+
+    public static final RegistryObject<Item> red_diamond_axe = ITEMS.register("red_diamond_axe", () ->
+            new AxeItem(RedDiamondTier.RED_DIAMOND_TIER, 5.0f, -2.9f, new Item.Properties().group(ArmourCraft.TAB)));
+
+    public static final RegistryObject<Item> red_diamond_shovel = ITEMS.register("red_diamond_shovel", () ->
+            new ShovelItem(RedDiamondTier.RED_DIAMOND_TIER, 1.5f, -2.9f, new Item.Properties().group(ArmourCraft.TAB)));
+
+    public static final RegistryObject<Item> red_diamond_hoe = ITEMS.register("red_diamond_hoe", () ->
+            new HoeItem(RedDiamondTier.RED_DIAMOND_TIER, 0.5f, new Item.Properties().group(ArmourCraft.TAB)));
 
     //Armour
-    public static final Item red_diamond_helmet = null;
-    public static final Item red_diamond_chestplate = null;
-    public static final Item red_diamond_leggings = null;
-    public static final Item red_diamond_boots = null;
+    public static final RegistryObject<Item> red_diamond_helmet = ITEMS.register("red_diamond_helmet", () ->
+            new ArmorItem(RedDiamondArmorMaterial.RED_DIAMOND_ARMOR_MATERIAL, EquipmentSlotType.HEAD, new Item.Properties().group(ArmourCraft.TAB)));
 
-    @SubscribeEvent
-    public static void registerItems(final RegistryEvent.Register<Item> event) {
+    public static final RegistryObject<Item> red_diamond_chestplate = ITEMS.register("red_diamond_chestplate", () ->
+            new ArmorItem(RedDiamondArmorMaterial.RED_DIAMOND_ARMOR_MATERIAL, EquipmentSlotType.CHEST, new Item.Properties().group(ArmourCraft.TAB)));
 
-        //Items
-        event.getRegistry().register(new Item(new Item.Properties().group(ArmourCraft.TAB)).setRegistryName("red_diamond"));
+    public static final RegistryObject<Item> red_diamond_leggings = ITEMS.register("red_diamond_leggings", () ->
+            new ArmorItem(RedDiamondArmorMaterial.RED_DIAMOND_ARMOR_MATERIAL, EquipmentSlotType.LEGS, new Item.Properties().group(ArmourCraft.TAB)));
 
-        //Tools
-        event.getRegistry().register(
-                new SwordItem(RedDiamondTier.RED_DIAMOND_TIER, 4, -2.3f, new Item.Properties().group(ArmourCraft.TAB))
-                        .setRegistryName("red_diamond_sword"));
-        event.getRegistry().register(
-                new PickaxeItem(RedDiamondTier.RED_DIAMOND_TIER, 1, -2.7f, new Item.Properties().group(ArmourCraft.TAB))
-                        .setRegistryName("red_diamond_pickaxe"));
-        event.getRegistry().register(
-                new ShovelItem(RedDiamondTier.RED_DIAMOND_TIER, 1.5f, -2.9f, new Item.Properties().group(ArmourCraft.TAB))
-                        .setRegistryName("red_diamond_shovel"));
-        event.getRegistry().register(
-                new AxeItem(RedDiamondTier.RED_DIAMOND_TIER, 5.0f, -2.9f, new Item.Properties().group(ArmourCraft.TAB))
-                        .setRegistryName("red_diamond_axe"));
-        event.getRegistry().register(
-                new HoeItem(RedDiamondTier.RED_DIAMOND_TIER, 0.5f, new Item.Properties().group(ArmourCraft.TAB))
-                        .setRegistryName("red_diamond_hoe"));
+    public static final RegistryObject<Item> red_diamond_boots = ITEMS.register("red_diamond_boots", () ->
+            new ArmorItem(RedDiamondArmorMaterial.RED_DIAMOND_ARMOR_MATERIAL, EquipmentSlotType.FEET, new Item.Properties().group(ArmourCraft.TAB)));
 
-        //Armour
-        event.getRegistry().register(new ArmorItem(RedDiamondArmorMaterial.RED_DIAMOND_ARMOR_MATERIAL, EquipmentSlotType.HEAD,
-                new Item.Properties().group(ArmourCraft.TAB)).setRegistryName("red_diamond_helmet"));
-        event.getRegistry().register(new ArmorItem(RedDiamondArmorMaterial.RED_DIAMOND_ARMOR_MATERIAL, EquipmentSlotType.CHEST,
-                new Item.Properties().group(ArmourCraft.TAB)).setRegistryName("red_diamond_chestplate"));
-        event.getRegistry().register(new ArmorItem(RedDiamondArmorMaterial.RED_DIAMOND_ARMOR_MATERIAL, EquipmentSlotType.LEGS,
-                new Item.Properties().group(ArmourCraft.TAB)).setRegistryName("red_diamond_leggings"));
-        event.getRegistry().register(new ArmorItem(RedDiamondArmorMaterial.RED_DIAMOND_ARMOR_MATERIAL, EquipmentSlotType.FEET,
-                new Item.Properties().group(ArmourCraft.TAB)).setRegistryName("red_diamond_boots"));
-    }
 
     public enum RedDiamondTier implements IItemTier {
         RED_DIAMOND_TIER(4, 2061, 8.0f, 3.0f, 12, () -> {
-            return Ingredient.fromItems(ItemInit.red_diamond);
+            return Ingredient.fromItems(ItemInit.red_diamond.get());
         });
 
         private final int harvestLevel;
@@ -125,9 +119,9 @@ public class ItemInit {
     public enum RedDiamondArmorMaterial implements IArmorMaterial {
         RED_DIAMOND_ARMOR_MATERIAL(ArmourCraft.MOD_ID + ":red_diamond_armor_material",
                 35, new int[] { 4, 7, 9, 4 }, 12, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0f, () -> {
-            return Ingredient.fromItems(ItemInit.red_diamond);
+            return Ingredient.fromItems(ItemInit.red_diamond.get());
         });
-       private static final int[] MAX_DAMAGE_ARRAY = new int[] { 13, 15, 16, 11 };
+        private static final int[] MAX_DAMAGE_ARRAY = new int[] { 13, 15, 16, 11 };
         private final String name;
         private final int maxDamageFactor;
         private final int[] damageReductionAmountArray;
