@@ -79,5 +79,4 @@ public class ArmourCraft
             return new ItemStack(ItemInit.red_diamond.get());
         }
     };
-
 }

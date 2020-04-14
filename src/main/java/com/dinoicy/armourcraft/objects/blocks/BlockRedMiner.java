@@ -1,5 +1,6 @@
 package com.dinoicy.armourcraft.objects.blocks;
 
+import com.dinoicy.armourcraft.init.BlockInit;
 import com.dinoicy.armourcraft.init.RedCTileEntityTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -10,7 +11,7 @@ import javax.annotation.Nullable;
 
 public class BlockRedMiner extends Block {
 
-    public BlockRedMiner(Properties properties) {
+    public BlockRedMiner(Block.Properties properties) {
         super(properties);
     }
 

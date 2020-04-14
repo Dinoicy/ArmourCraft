@@ -61,14 +61,14 @@ public class RedCTileEntity extends TileEntity implements ITickableTileEntity {
     }
 
     private boolean destroyBlock(BlockPos pos, boolean dropBlock, @Nullable Entity entity) {
-        BlockState blockstate = world.getBlockState(pos);
-        if(blockstate.isAir(world, pos)) return false;
+        BlockState blockState = world.getBlockState(pos);
+        if(blockState.isAir(world, pos)) return false;
         else {
             IFluidState ifluidstate = world.getFluidState(pos);
-            world.playEvent(2001, pos, Block.getStateId(blockstate));
+            world.playEvent(2001, pos, Block.getStateId(blockState));
             if(dropBlock) {
-                TileEntity tileentity = blockstate.hasTileEntity() ? world.getTileEntity(pos) : null;
-                Block.spawnDrops(blockstate, world, this.pos.add(0, 1.5, 0), tileentity, entity, ItemStack.EMPTY);
+                TileEntity tileentity = blockState.hasTileEntity() ? world.getTileEntity(pos) : null;
+                Block.spawnDrops(blockState, world, this.pos.add(0, 1.5, 0), tileentity, entity, ItemStack.EMPTY);
             }
             return world.setBlockState(pos, ifluidstate.getBlockState(), 3);
         }

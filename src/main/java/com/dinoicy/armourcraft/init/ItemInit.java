@@ -23,11 +23,6 @@ public class ItemInit {
     public static void init() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
-    //Blocks
-    public static final RegistryObject<Item> red_diamond_block = ITEMS.register("red_diamond_block", () -> new Item(new Item.Properties().group(ArmourCraft.TAB)));
-    public static final RegistryObject<Item> red_diamond_ore = ITEMS.register("red_diamond_ore", () -> new Item(new Item.Properties().group(ArmourCraft.TAB)));
-    public static final RegistryObject<Item> red_crafter = ITEMS.register("red_crafter", () -> new Item(new Item.Properties().group(ArmourCraft.TAB)));
-    public static final RegistryObject<Item> red_miner = ITEMS.register("red_diamond", () -> new Item(new Item.Properties().group(ArmourCraft.TAB)));
 
     //Items
     public static final RegistryObject<Item> red_item = ITEMS.register("red_item", () -> new Item(new Item.Properties().group(ArmourCraft.TAB)));
