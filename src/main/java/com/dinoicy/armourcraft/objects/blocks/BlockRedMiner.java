@@ -22,6 +22,6 @@ public class BlockRedMiner extends Block {
     @Nullable
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return RedCTileEntityTypes.RED_MINER.get().create();
+        return RedCTileEntityTypes.red_miner.get().create();
     }
 }

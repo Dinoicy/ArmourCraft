@@ -9,7 +9,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.concurrent.Callable;
 
 public class NBTHelper {
 

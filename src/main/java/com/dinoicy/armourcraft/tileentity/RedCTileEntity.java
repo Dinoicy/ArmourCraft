@@ -25,7 +25,7 @@ public class RedCTileEntity extends TileEntity implements ITickableTileEntity {
     }
 
     public RedCTileEntity() {
-        this(RedCTileEntityTypes.RED_MINER.get());
+        this(RedCTileEntityTypes.red_miner.get());
     }
 
     @Override
