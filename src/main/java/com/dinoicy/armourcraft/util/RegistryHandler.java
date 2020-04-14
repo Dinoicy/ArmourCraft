@@ -3,6 +3,7 @@ package com.dinoicy.armourcraft.util;
 import com.dinoicy.armourcraft.ArmourCraft;
 import com.dinoicy.armourcraft.items.ItemBase;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,7 +17,6 @@ import net.minecraftforge.registries.ForgeRegistries;
         //ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     //}
 
-    //Items
     //public static final RegistryObject<Item> RED_DIAMOND = ITEMS.register("red_diamond", ItemBase::new);
 
 //}

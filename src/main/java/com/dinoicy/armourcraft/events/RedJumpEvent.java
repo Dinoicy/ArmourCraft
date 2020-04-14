@@ -1,7 +1,7 @@
 package com.dinoicy.armourcraft.events;
 
 import com.dinoicy.armourcraft.ArmourCraft;
-import com.dinoicy.armourcraft.init.BlockInit;
+import com.dinoicy.armourcraft.init.BlockInitNew;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
