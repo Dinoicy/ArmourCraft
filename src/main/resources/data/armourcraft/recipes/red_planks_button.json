@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "armourcraft:red_planks"
+    }
+  ],
+  "result": {
+    "item": "minecraft:acacia_button",
+    "count": 1
+  }
+}

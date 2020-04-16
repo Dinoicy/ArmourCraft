@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "armourcraft:red_logs"
+    }
+  ],
+  "result": {
+    "item": "armourcraft:red_planks",
+    "count": 4
+  }
+}

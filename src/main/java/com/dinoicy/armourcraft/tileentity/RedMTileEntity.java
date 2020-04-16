@@ -48,9 +48,9 @@ public class RedMTileEntity extends TileEntity implements ITickableTileEntity {
 
     private void execute() {
         int index = 0;
-        Block[] blocksRemoved = new Block[9];
-        for(int x = 0; x < 3; x++) {
-            for(int z = 0; z < 3; z++) {
+        Block[] blocksRemoved = new Block[16];
+        for(int x = 1; x < 4; x++) {
+            for(int z = 2; z < 5; z++) {
                 BlockPos posToBreak = new BlockPos(this.x + x, this.y, this.z + z);
                 blocksRemoved[index] = this.world.getBlockState(posToBreak).getBlock();
                 destroyBlock(posToBreak, true, null);

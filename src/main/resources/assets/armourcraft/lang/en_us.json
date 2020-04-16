@@ -19,6 +19,10 @@
   "block.armourcraft.red_crafter": "Red Crafter",
   "block.armourcraft.red_miner": "Red Miner",
   "block.armourcraft.red_chest": "Red Diamond Chest",
+  "block.armourcraft.red_planks": "Red Planks",
+  "block.armourcraft.red_logs": "Red Logs",
+  "block.armourcraft.red_leaves": "Red Leaves",
+  "block.armourcraft.red_sapling": "Red Sapling",
 
   "container.red_chest": "Red Diamond Chest"
 }

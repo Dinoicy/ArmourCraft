@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "armourcraft:red_logs",
+    "armourcraft:red_wood",
+    "armourcraft:stripped_red_logs",
+    "armourcraft:stripped_red_wood"
+  ]
+}

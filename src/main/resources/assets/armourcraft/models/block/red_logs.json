@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "armourcraft:blocks/red_logs_top",
+    "side": "armourcraft:blocks/red_logs"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y":  { "model": "armourcraft:block/red_logs" },
+    "axis=z":   { "model": "armourcraft:block/red_logs", "x": 90 },
+    "axis=x":   { "model": "armourcraft:block/red_logs", "x": 90, "y": 90 }
+  }
+}

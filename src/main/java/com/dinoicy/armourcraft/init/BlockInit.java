@@ -1,11 +1,13 @@
 package com.dinoicy.armourcraft.init;
 
 import com.dinoicy.armourcraft.ArmourCraft;
+import com.dinoicy.armourcraft.objects.blocks.ArmourSaplingBlock;
 import com.dinoicy.armourcraft.objects.blocks.BlockRedMiner;
 import com.dinoicy.armourcraft.objects.blocks.RedChestBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
+import com.dinoicy.armourcraft.world.feature.RedTree;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -33,4 +35,12 @@ public class BlockInit {
             .hardnessAndResistance(5.0f, 6.0f).sound(SoundType.METAL).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
 
     public static final RegistryObject<Block> RED_CHEST = BLOCKS.register("red_chest", () -> new RedChestBlock(Block.Properties.from(BlockInit.red_diamond_block.get())));
+
+    public static final RegistryObject<Block> RED_PLANKS = BLOCKS.register("red_planks", () -> new Block(Block.Properties.from(Blocks.OAK_PLANKS)));
+
+    public static final RegistryObject<Block> RED_LOGS = BLOCKS.register("red_logs", () -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> RED_LEAVES = BLOCKS.register("red_leaves", () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
+
+    public static final RegistryObject<Block> RED_SAPLING = BLOCKS.register("red_sapling", () -> new ArmourSaplingBlock(() -> new RedTree(), Block.Properties.from(Blocks.OAK_SAPLING)));
 }
