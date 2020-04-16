@@ -1,13 +1,10 @@
 package com.dinoicy.armourcraft.objects.blocks;
 
-import com.dinoicy.armourcraft.init.BlockInit;
-import com.dinoicy.armourcraft.init.RedCTileEntityTypes;
+import com.dinoicy.armourcraft.init.ArmourTileEntityTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockReader;
-
-import javax.annotation.Nullable;
 
 public class BlockRedMiner extends Block {
 
@@ -22,6 +19,6 @@ public class BlockRedMiner extends Block {
 
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return RedCTileEntityTypes.red_miner.get().create();
+        return ArmourTileEntityTypes.red_miner.get().create();
     }
 }

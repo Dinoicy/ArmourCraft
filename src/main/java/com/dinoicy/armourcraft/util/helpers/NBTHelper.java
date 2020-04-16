@@ -1,6 +1,6 @@
 package com.dinoicy.armourcraft.util.helpers;
 
-import com.dinoicy.armourcraft.tileentity.RedCTileEntity;
+import com.dinoicy.armourcraft.tileentity.RedMTileEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
@@ -17,14 +17,14 @@ public class NBTHelper {
             return writeItemStack((ItemStack)o);
         }
 
-        if(o instanceof RedCTileEntity) {
-            return writeRedC((RedCTileEntity)o);
+        if(o instanceof RedMTileEntity) {
+            return writeRedC((RedMTileEntity)o);
         }
 
         return null;
     }
 
-    private static CompoundNBT writeRedC(RedCTileEntity o) {
+    private static CompoundNBT writeRedC(RedMTileEntity o) {
         CompoundNBT compound = new CompoundNBT();
         compound.putInt("x", o.x);
         compound.putInt("y", o.y);

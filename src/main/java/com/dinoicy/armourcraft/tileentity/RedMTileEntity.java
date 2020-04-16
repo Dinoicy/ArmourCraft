@@ -1,6 +1,6 @@
 package com.dinoicy.armourcraft.tileentity;
 
-import com.dinoicy.armourcraft.init.RedCTileEntityTypes;
+import com.dinoicy.armourcraft.init.ArmourTileEntityTypes;
 import com.dinoicy.armourcraft.util.helpers.NBTHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -15,17 +15,17 @@ import net.minecraft.util.math.BlockPos;
 
 import javax.annotation.Nullable;
 
-public class RedCTileEntity extends TileEntity implements ITickableTileEntity {
+public class RedMTileEntity extends TileEntity implements ITickableTileEntity {
 
     public int x, y, z, tick;
     boolean initialized = false;
 
-    public RedCTileEntity(final TileEntityType<?> tileEntityTypeIn) {
+    public RedMTileEntity(final TileEntityType<?> tileEntityTypeIn) {
         super(tileEntityTypeIn);
     }
 
-    public RedCTileEntity(){
-        this(RedCTileEntityTypes.red_miner.get());
+    public RedMTileEntity(){
+        this(ArmourTileEntityTypes.red_miner.get());
     }
 
     @Override

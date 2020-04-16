@@ -1,13 +1,13 @@
 package com.dinoicy.armourcraft;
 
-import com.dinoicy.armourcraft.init.BlockInit;
-import com.dinoicy.armourcraft.init.ItemInit;
-import com.dinoicy.armourcraft.init.RedCTileEntityTypes;
+import com.dinoicy.armourcraft.init.*;
 import com.dinoicy.armourcraft.world.gen.ArmourOreGen;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,6 +30,7 @@ public class ArmourCraft
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "armourcraft";
     public static ArmourCraft instance;
+    public static final ResourceLocation RED_DIM_TYPE = new ResourceLocation(MOD_ID, "red");
 
     public ArmourCraft() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -38,7 +39,11 @@ public class ArmourCraft
 
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
-        RedCTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
+        ArmourTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
+        ArmourContainerTypes.CONTAINER_TYPES.register(modEventBus);
+
+        BiomeInit.BIOMES.register(modEventBus);
+        DimensionInit.MOD_DIMENSIONS.register(modEventBus);
 
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
@@ -57,6 +62,11 @@ public class ArmourCraft
         });
 
         LOGGER.debug("Registered Block Items!");
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {
+        BiomeInit.registerBiomes();
     }
 
     private void setup(final FMLCommonSetupEvent event) { }

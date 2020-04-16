@@ -14,9 +14,9 @@ public class ArmourOreGen {
     public static void generateOre() {
         for(Biome biome : ForgeRegistries.BIOMES) {
                 ConfiguredPlacement customConfig = Placement.COUNT_RANGE
-                        .configure(new CountRangeConfig(1, 5, 5, 17));
+                        .configure(new CountRangeConfig(1, 0, 0, 16));
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE
-                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.red_diamond_ore.get().getDefaultState(), 7))
+                        .withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.red_diamond_ore.get().getDefaultState(), 6))
                         .withPlacement(customConfig));
         }
     }

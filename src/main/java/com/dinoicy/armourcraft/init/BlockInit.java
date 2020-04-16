@@ -1,6 +1,8 @@
 package com.dinoicy.armourcraft.init;
 
 import com.dinoicy.armourcraft.ArmourCraft;
+import com.dinoicy.armourcraft.objects.blocks.BlockRedMiner;
+import com.dinoicy.armourcraft.objects.blocks.RedChestBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -27,6 +29,8 @@ public class BlockInit {
     public static final RegistryObject<Block> red_crafter = BLOCKS.register("red_crafter", () -> new Block(Block.Properties.create(Material.IRON)
             .hardnessAndResistance(5.0f, 6.0f).sound(SoundType.METAL).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
 
-    public static final RegistryObject<Block> red_miner = BLOCKS.register("red_miner", () -> new Block(Block.Properties.create(Material.IRON)
+    public static final RegistryObject<Block> red_miner = BLOCKS.register("red_miner", () -> new BlockRedMiner(Block.Properties.create(Material.IRON)
             .hardnessAndResistance(5.0f, 6.0f).sound(SoundType.METAL).harvestTool(ToolType.PICKAXE).harvestLevel(3)));
+
+    public static final RegistryObject<Block> RED_CHEST = BLOCKS.register("red_chest", () -> new RedChestBlock(Block.Properties.from(BlockInit.red_diamond_block.get())));
 }
