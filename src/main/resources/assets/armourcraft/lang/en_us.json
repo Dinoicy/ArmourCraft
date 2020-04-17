@@ -23,6 +23,10 @@
   "block.armourcraft.red_logs": "Red Logs",
   "block.armourcraft.red_leaves": "Red Leaves",
   "block.armourcraft.red_sapling": "Red Sapling",
+  "block.armourcraft.red_planks_button": "Red Button",
+  "block.armourcraft.red_planks_fence": "Red Fence",
+  "block.armourcraft.red_planks_pressure_plate": "Red Pressure Plate",
+  "block.armourcraft.red_planks_stairs": "Red Stairs",
 
   "container.red_chest": "Red Diamond Chest"
 }

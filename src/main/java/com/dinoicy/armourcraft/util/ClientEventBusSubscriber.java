@@ -1,14 +1,17 @@
 package com.dinoicy.armourcraft.util;
 
 import com.dinoicy.armourcraft.ArmourCraft;
+import com.dinoicy.armourcraft.client.entity.render.RedAnimalEntityRender;
 import com.dinoicy.armourcraft.client.gui.RedChestScreen;
 import com.dinoicy.armourcraft.init.ArmourContainerTypes;
+import com.dinoicy.armourcraft.init.ArmourEntityTypes;
 import com.dinoicy.armourcraft.init.BlockInit;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
@@ -19,5 +22,6 @@ public class ClientEventBusSubscriber {
     public static void clientSetup(FMLClientSetupEvent event) {
         ScreenManager.registerFactory(ArmourContainerTypes.RED_CHEST.get(), RedChestScreen::new);
         RenderTypeLookup.setRenderLayer(BlockInit.RED_SAPLING.get(), RenderType.getCutout());
+        RenderingRegistry.registerEntityRenderingHandler(ArmourEntityTypes.RED_ANIMAL_ENTITY.get(), RedAnimalEntityRender::new);
     }
 }

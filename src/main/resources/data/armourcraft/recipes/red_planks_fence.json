@@ -1,15 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "wooden_pressure_plate",
   "pattern": [
-    "##"
+    "XiX",
+    "XiX"
   ],
   "key": {
-    "#": {
+    "X": {
       "item": "armourcraft:red_planks"
+    },
+    "i": {
+      "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "armourcraft:red_planks_pressure_plate"
+    "item": "armourcraft:red_planks_fence",
+    "count": 3
   }
 }

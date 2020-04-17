@@ -41,6 +41,7 @@ public class ArmourCraft
         BlockInit.BLOCKS.register(modEventBus);
         ArmourTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
         ArmourContainerTypes.CONTAINER_TYPES.register(modEventBus);
+        ArmourEntityTypes.ENTITY_TYPES.register(modEventBus);
 
         BiomeInit.BIOMES.register(modEventBus);
         DimensionInit.MOD_DIMENSIONS.register(modEventBus);

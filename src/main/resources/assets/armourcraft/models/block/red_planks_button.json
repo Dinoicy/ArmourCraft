@@ -1,0 +1,6 @@
+{
+    "parent": "block/button",
+    "textures": {
+        "texture": "armourcraft:blocks/red_planks"
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "armourcraft:block/red_planks_pressure_plate" },
+    "powered=true": { "model": "armourcraft:block/red_planks_pressure_plate_down" }
+  }
+}
